@@ -1,0 +1,279 @@
+/* Start variables */
+:root {
+
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    /* (background) */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    /* (circle) */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* End variables */
+
+/* Start global */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* End global */
+
+/* Start my framework */
+
+
+/* End my framework */
+
+/*  Start Code */
+.page {
+    width: 640px;
+    height: 478px;
+    background-color: var(--White);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 4px 10px 30px rgb(0 0 0 / 10%);
+}
+
+
+
+/* Start result */
+
+.result {
+    background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.result p.upper-one {
+    font-size: 18px;
+    color: var(--Light-lavender);
+    margin-bottom: 30px;
+}
+
+.result .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(180deg, var(--Violet-blue), var(--Persian-blue));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.result .circle .circle-fr {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.result .circle .circle-sec {
+    color: var(--Light-lavender);
+    font-size: 16px;
+}
+
+.result .great {
+    bottom: 140px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+
+.result .last {
+    bottom: 65px;
+    position: absolute;
+    text-align: center;
+    color: var(--Light-lavender);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 235px;
+    font-size: 16px;
+}
+
+/* End result */
+
+/* Start summary */
+.summary {
+    padding: 30px;
+    position: relative;
+}
+
+.summary p:first-child {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.summary .sum-sqr {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.summary .reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary .reaction .left-side p {
+    color: var(--Light-red);
+    font-size: 18px;
+}
+
+.summary .memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary .memory .left-side p {
+    color: var(--Orangey-yellow);
+}
+
+.summary .verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary .verbal .left-side p {
+    color: var(--Green-teal);
+}
+
+.summary .visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary .visual .left-side p {
+    color: var(--Cobalt-blue);
+}
+
+
+
+.summary .sum-sqr .left-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+.summary .sum-sqr .left-side img {
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
+
+.summary .sum-sqr .right-side p {
+    margin: auto;
+
+}
+
+
+
+.summary .sum-sqr .right-side p span {
+    color: var(--Light-lavender);
+    font-size: 16px;
+}
+
+.summary button {
+    margin: 15px auto;
+    display: block;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 3rem;
+    width: calc(100% - 60px);
+    position: absolute;
+    left: 30px;
+    background-color: var(--Dark-gray-blue);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.summary button:hover {
+    background-color: var(--Cobalt-blue);
+}
+
+/* End summary */
+
+
+@media (max-width: 640px) {
+    body {
+        height: 100vh;
+    }
+
+    .page {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .result {
+        height: 45vh;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        min-width: 100%;
+    }
+
+    .result .upper-one {
+        margin-bottom: 15px !important;
+        display: block;
+    }
+
+    .result .circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .result .great {
+        bottom: 100px;
+    }
+
+    .result .last {
+        bottom: 30px;
+    }
+
+    .summary {
+        padding-top: 0 !important;
+        height: 50vh;
+    }
+}
+
+/*  End Code */
